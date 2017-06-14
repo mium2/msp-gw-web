@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <jdbc>
+        <driverClassName>com.microsoft.sqlserver.jdbc.SQLServerDriver</driverClassName>
+        <url>+Um1gu42Jlg3bCnvDmjVKsHlBRl4RM82L/fM5qtoOIA6SqJ35jmd+lfKdKIcjaqROXM0xCQqD4O3RyferBQ+7Q==</url>
+        <username>vTn+Iu2LqRJIl3f4EfbtBg==</username>
+        <password>NFCBNYUzfNNrutkD4TpmDw==</password>
+    </jdbc>
+    <jdbc2>
+        <driverClassName>com.microsoft.sqlserver.jdbc.SQLServerDriver</driverClassName>
+        <url>+Um1gu42Jlg3bCnvDmjVKsHlBRl4RM82L/fM5qtoOIA6SqJ35jmd+lfKdKIcjaqROXM0xCQqD4O3RyferBQ+7Q==</url>
+        <username>vTn+Iu2LqRJIl3f4EfbtBg==</username>
+        <password>NFCBNYUzfNNrutkD4TpmDw==</password>
+    </jdbc2>
+    <!--아래의 사용하시고자 하는 엘리먼트를 확장해서 사용하세요.-->
+    <test>
+        <id>TEST01</id>
+    </test>
+    <upload>
+        <path>/Users/mium2/project/R2-msp-platform/msp-admin/temp/upload</path>
+    </upload>
+    <test>
+        <aaa>1111</aaa>
+    </test>
+</configuration>
