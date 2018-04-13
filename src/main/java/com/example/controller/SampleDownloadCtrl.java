@@ -31,7 +31,7 @@ public class SampleDownloadCtrl {
     @Value("${upload.path:/tmp}")
     private String UPLOAD_ROOT_PATH;
 
-    @RequestMapping(value = "/api/sample/download/{file_extension}/{file_id}")
+    @RequestMapping(value = "/api/sample/download/{file_extension}/{file_id}",produces = "application/json; charset=utf8")
     public ModelAndView get(HttpServletRequest request, HttpServletResponse response,@PathVariable String file_extension, @PathVariable String file_id) throws Exception {
 
         // 디렉토리 경로 조작 방지 필터

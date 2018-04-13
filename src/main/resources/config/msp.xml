@@ -14,7 +14,7 @@
     <common>
         <api>
             <upload>
-                <path>F:/temp/</path>
+                <path>/Users/mium2/temp/</path>
             </upload>
         </api>
     </common>
@@ -22,9 +22,9 @@
 	<datasource>
 		<type>jndi</type>
         <!--중요! 연결할 DB 종류를 반드시 맞춰주세요-->
-        <!--<dbtype>oracle</dbtype>-->
+        <dbtype>oracle</dbtype>
 		<!--<dbtype>oracle9i</dbtype>-->
-        <dbtype>mysql</dbtype>
+        <!--<dbtype>mysql</dbtype>-->
         <!--<dbtype>mssql</dbtype>-->
         <!--<dbtype>db2</dbtype>-->
         <!--<dbtype>informix</dbtype>-->
@@ -68,11 +68,13 @@
 	</server>
 	<!-- Resource Download URL -->
 	<resource>
-        <!--리소스 zip파일 다운받을 URL을 Request 프로토콜이 http든 https든 상관없이 무조건 https로 URL을 만들어 보냄-->
-        <https_force_yn>N</https_force_yn>
-        <https_port></https_port>
+		<!--리소스 zip파일 다운받을 URL을 Request 프로토콜이 http든 https든 상관없이 무조건 https로 URL을 만들어 보냄-->
+		<https_force_yn>N</https_force_yn>
+		<https_port></https_port>
         <!--매우중요: 리소스 배포할 서버가 따로 존재할경우 해당 리소스배포서버 URL정보를 넣어준다. 만약, 리소스배포파일서버가 따로 없다면 빈값으로 넣어야함(중요)-->
 		<download_url></download_url>
+		<!--0:NAS 또는 http서버를 사용 zip파일명을 포함한 GET방식 파일요청. 1:WAS에 다운로드 zip파일 명이 아닌 파일아이디를 넘겨서 받는 방식  -->
+		<download_url_type>0</download_url_type>
 	</resource>
 	
 	<!-- msp Store Configuration -->
@@ -103,7 +105,7 @@
     -->
     <webplatform>
         <!--중요. 반드시 확인 마지막 /는 없게 해 주세요. 그리고 어드민에서 배포한 폴더명 마지막 real_res, dev_res는 빼야함-->
-        <resource_path>F:/temp/webplatform_res</resource_path>
+        <resource_path>/Users/mium2/temp/webplatform_res</resource_path>
 		<webRoot>/msp-gw</webRoot>
 		<webInterfaceRoot>real_res/1/res</webInterfaceRoot>
     </webplatform>

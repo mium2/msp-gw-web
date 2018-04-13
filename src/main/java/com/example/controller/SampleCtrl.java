@@ -4,6 +4,7 @@ import kr.msp.base.util.JsonObjectConverter;
 import kr.msp.constant.Const;
 import org.apache.ibatis.session.SqlSession;
 import org.json.JSONObject;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class SampleCtrl {
 
     @Autowired(required=true)
     @Qualifier("sqlSession_sample")  ///WEB-INF/config/context/sample-mybatis-context.xml파일에서 설정한 DB 연결세션
-    private SqlSession sqlSession;
+    private SqlSessionTemplate sqlSession;
 
     @Qualifier("messageSource")
     @Autowired(required=true)
@@ -38,7 +39,7 @@ public class SampleCtrl {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // !!!주의 확인: RequestMapping  uri 는 반드시 /api로 시작 해야만 한다.
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    @RequestMapping(method= RequestMethod.POST, value="/api/basic/sample/{id}")
+    @RequestMapping(method= RequestMethod.POST, value="/api/basic/sample/{id}",produces = "application/json; charset=utf8")
     public @ResponseBody String sampleList(HttpServletRequest request, HttpServletResponse response){
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

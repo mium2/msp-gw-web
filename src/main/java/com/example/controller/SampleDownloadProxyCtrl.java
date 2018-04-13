@@ -31,7 +31,7 @@ public class SampleDownloadProxyCtrl {
     private String UPLOAD_ROOT_PATH;
     private Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
-    @RequestMapping(value = "/sample/proxy/download/{file_extension}/{file_id}")
+    @RequestMapping(value = "/sample/proxy/download/{file_extension}/{file_id}",produces = "application/json; charset=utf8")
     public ModelAndView get(HttpServletRequest request, HttpServletResponse response,@PathVariable String file_extension, @PathVariable String file_id) throws Exception {
 
         // 디렉토리 경로 조작 방지 필터

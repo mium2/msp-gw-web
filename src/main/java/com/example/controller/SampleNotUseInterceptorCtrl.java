@@ -32,7 +32,7 @@ public class SampleNotUseInterceptorCtrl {
     @Autowired(required = true)
     private MessageSource messageSource;
 
-    @RequestMapping(value = "/notUseInterceptor")
+    @RequestMapping(value = "/notUseInterceptor",produces = "application/json; charset=utf8")
     public ModelAndView getPreventToken(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         // JSON 문자열을 Map or List Object 로 변환

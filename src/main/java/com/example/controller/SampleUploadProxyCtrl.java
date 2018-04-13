@@ -38,7 +38,7 @@ public class SampleUploadProxyCtrl {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
-    @RequestMapping(value="/api/sample/proxy/fileUpload",method= RequestMethod.POST)
+    @RequestMapping(value="/api/sample/proxy/fileUpload",method= RequestMethod.POST,produces = "application/json; charset=utf8")
     public @ResponseBody String mobileTempUploadPost(HttpServletRequest request, HttpServletResponse response){
 
         //클라이언트에서 넘어온 공통 헤더 맵정보

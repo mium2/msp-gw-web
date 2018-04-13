@@ -33,9 +33,13 @@
     <!--<mvc:default-servlet-handler default-servlet-name="WorkerServlet"/>-->
 	<mvc:default-servlet-handler/>
 
-    <beans:bean id="uracleSecureAuth" class="kr.msp.base.security.UracleSecureAuth" />     <!--uralce SecureAuth decirpt-->
+    <beans:bean id="uracleSecureAuth" class="kr.msp.base.security.UracleSecureAuth" >     <!--uralce SecureAuth decirpt-->
+        <beans:qualifier value="uracleSecureAuth"/>
+    </beans:bean>
 
-    <beans:bean id="otherSecureAuth" class="com.example.controller.SampleOtherSecureAuth" />   <!-- Client 3part product-->
+    <beans:bean id="otherSecureAuth" class="com.example.controller.SampleOtherSecureAuth"> <!-- Client 3part product-->
+        <beans:qualifier value="otherSecureAuth"/>
+    </beans:bean>
 
     <beans:bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <beans:property name="messageConverters">

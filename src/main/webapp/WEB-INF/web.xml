@@ -63,6 +63,7 @@
 			<param-value>
                 /WEB-INF/config/context/msp-gw-context.xml
                 /WEB-INF/config/context/msp-resource-context.xml
+
             </param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
@@ -73,7 +74,10 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-		  
+	<listener>
+		<listener-class>kr.msp.base.GWContextListener</listener-class>
+	</listener>
+
 	<!-- Error Page Definition -->
 	<error-page>
 		<error-code>403</error-code>

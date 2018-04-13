@@ -5,7 +5,7 @@
 	<packaging>war</packaging>
 	<groupId>kr.msp</groupId>
 	<artifactId>msp-gw-web</artifactId>
-	<version>2.2.9</version>
+	<version>2.3.2</version>
 	<name>msp-gw-web</name>
 
 	<properties>

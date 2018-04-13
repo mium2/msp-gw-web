@@ -41,7 +41,7 @@ public class SampleUploadCtrl {
     private String UPLOAD_ROOT_PATH;
 
 
-    @RequestMapping(value="/api/sample/fileUpload",method= RequestMethod.POST)
+    @RequestMapping(value="/api/sample/fileUpload",method= RequestMethod.POST,produces = "application/json; charset=utf8")
     public @ResponseBody String mobileTempUploadPost(HttpServletRequest request, HttpServletResponse response){
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -101,7 +101,8 @@ public class SampleUploadCtrl {
                         imgInfoMap.put("absPath",filePath);
                         imgInfoList.add(imgInfoMap);
                     }
-                    responseBodyMap.put("attachFiles",imgInfoList);
+//                    responseBodyMap.put("attachFiles",imgInfoList);
+                    responseBodyMap.put("status","200");
 
                 }else{
                     reqHeadMap.put(Const.RESULT_CODE,Const.EXCEPTION_ERROR);

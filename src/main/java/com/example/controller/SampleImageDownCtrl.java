@@ -29,7 +29,7 @@ public class SampleImageDownCtrl {
 
     @Value("${upload.path:/tmp}")
     private String UPLOAD_ROOT_PATH;
-    @RequestMapping(value="/http/down/image/{file_extension}/{file_id}")
+    @RequestMapping(value="/http/down/image/{file_extension}/{file_id}" ,produces = "application/json; charset=utf8")
     public ModelAndView getImage2(HttpServletRequest request, HttpServletResponse response,@PathVariable String file_extension, @PathVariable String file_id) {
 
         file_extension = WebFilterUtil.toWebFileFilter(file_extension);

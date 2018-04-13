@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <legacy_sys>
+        <checkLoopTime>10</checkLoopTime>
+        <!--쉼표 구분자로 넣는다 ex)http://211.241.199.215:18080/,http://211.241.199.215:18080/,http://127.0.0.1:8080/msp-gw/-->
+        <host_list></host_list>
+    </legacy_sys>
     <jdbc>
         <driverClassName>com.microsoft.sqlserver.jdbc.SQLServerDriver</driverClassName>
         <url>+Um1gu42Jlg3bCnvDmjVKsHlBRl4RM82L/fM5qtoOIA6SqJ35jmd+lfKdKIcjaqROXM0xCQqD4O3RyferBQ+7Q==</url>

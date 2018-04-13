@@ -30,7 +30,7 @@ private Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 @Autowired(required=true)
 private MessageSource messageSource;
 
-    @RequestMapping(value="/api/soapSample")
+    @RequestMapping(value="/api/soapSample",produces = "application/json; charset=utf8")
     public ModelAndView sampleUseConfig(HttpServletRequest request, HttpServletResponse response){
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // 클라이언트에서 넘어온 request 값  map으로 리턴해줌 (반드시 포함)
